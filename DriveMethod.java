@@ -63,6 +63,7 @@ public class MecanumWheelDrive{
      * @param rotate  how much to rotate, from -1 to 1, 1 is full right
      * @param strafe  how much to strafe, from -1 to 1, 1 is full right. left x = strafe
      */
+    
     @Override
     public void driveMecanum(double forward, double rotate, double strafe) {
         double frontLeft = forward + rotate + strafe;
@@ -80,13 +81,4 @@ public class MecanumWheelDrive{
         // Ch3 = Left joystick Y-axis
         // Ch4 = Left joystick X-axis
     }
-
-    public MecanumWheelDrive setMotorNames(String leftFront, String rightFront, String leftBack, String rightBack) {
-        leftFrontMotorName = leftFront;
-        RightFrontMotorName = rightFront;
-        leftBackMotorName = leftBack;
-        RightBackMotorName = rightBack;
-        return this;
-    }
-
 }
